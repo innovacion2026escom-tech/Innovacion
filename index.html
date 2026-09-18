@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovación y Emprendimiento Tecnológico - IPN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── Imagen de sección por tema ── */
+        .section-image {
+            margin-top: 1.8rem;
+            text-align: center;
+        }
+        .section-image img {
+            max-width: 100%;
+            width: 680px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            display: block;
+            margin: 0 auto;
+        }
+        .section-image-caption {
+            margin-top: 0.55rem;
+            font-size: 0.82rem;
+            color: #7a8499;
+            font-style: italic;
+        }
+        .section-image-caption i {
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════════
+         HEADER
+    ══════════════════════════════════════════ -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <h1>Innovación y Emprendimiento Tecnológico</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar en el curso...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="user-nav">
+                <a href="#" id="manualBtn" title="Manual de Usuario"><i class="fas fa-book"></i></a>
+                <a href="#" id="contactBtn" title="Contacto"><i class="fas fa-envelope"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════
+         PESTAÑAS DE NAVEGACIÓN
+    ══════════════════════════════════════════ -->
+    <nav class="main-nav">
+        <ul class="nav-tabs">
+            <li class="nav-tab active" data-tab="bienvenida">
+                <i class="fas fa-home"></i> Bienvenida
+            </li>
+            <li class="nav-tab" data-tab="metodologia">
+                <i class="fas fa-cogs"></i> Metodología
+            </li>
+            <li class="nav-tab" data-tab="competencia">
+                <i class="fas fa-bullseye"></i> Unidad de Competencia
+            </li>
+            <li class="nav-tab" data-tab="evaluacion">
+                <i class="fas fa-clipboard-check"></i> Evaluación
+            </li>
+            <li class="nav-tab" data-tab="requerimientos">
+                <i class="fas fa-list-check"></i> Requerimientos
+            </li>
+            <li class="nav-tab" data-tab="glosario">
+                <i class="fas fa-spell-check"></i> Glosario
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ══════════════════════════════════════════
+         CONTENEDOR PRINCIPAL
+    ══════════════════════════════════════════ -->
+    <div class="main-container">
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-book-open"></i> Contenidos</h3>
+            </div>
+            <ul class="content-menu" id="contentMenu">
+
+                <!-- UNIDAD I -->
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad1">
+                        <i class="fas fa-chevron-right"></i> Unidad I: Innovación
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema1-1">1.1 La Empresa Innovadora</a></li>
+                        <li><a href="#" data-content="tema1-2">1.2 Clasificación de la Innovación</a></li>
+                        <li><a href="#" data-content="tema1-3">1.3 Reglas de la Innovación</a></li>
+                        <li><a href="#" data-content="actividades1" class="activity-link"><i class="fas fa-tasks"></i> Actividades Unidad I</a></li>
+                        <li><a href="#" data-content="quiz1" class="activity-link"><i class="fas fa-clipboard-check"></i> Cuestionario Unidad I</a></li>
+                    </ul>
+                </li>
+
+                <!-- UNIDAD II -->
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad2">
+                        <i class="fas fa-chevron-right"></i> Unidad II: Innovación Tecnológica
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema2-1">2.1 Investigación + Desarrollo + Innovación</a></li>
+                        <li><a href="#" data-content="tema2-2">2.2 Paradigmas Tecnológicos</a></li>
+                        <li><a href="#" data-content="tema2-3">2.3 Competencias de la Innovación Tecnológica</a></li>
+                        <li><a href="#" data-content="tema2-4">2.4 El Proceso de Innovación Tecnológica</a></li>
+                        <li><a href="#" data-content="tema2-5">2.5 Herramientas para Innovar</a></li>
+                        <li><a href="#" data-content="actividades2" class="activity-link"><i class="fas fa-tasks"></i> Actividades Unidad II</a></li>
+                        <li><a href="#" data-content="quiz2" class="activity-link"><i class="fas fa-clipboard-check"></i> Cuestionario Unidad II</a></li>
+                    </ul>
+                </li>
+
+                <!-- UNIDAD III -->
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad3">
+                        <i class="fas fa-chevron-right"></i> Unidad III: Emprendimiento
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema3-1">3.1 La Empresa</a></li>
+                        <li><a href="#" data-content="tema3-2">3.2 Emprendimiento</a></li>
+                        <li><a href="#" data-content="tema3-3">3.3 Clases de Emprendedor</a></li>
+                        <li><a href="#" data-content="tema3-4">3.4 El Proceso Emprendedor</a></li>
+                        <li><a href="#" data-content="actividades3" class="activity-link"><i class="fas fa-tasks"></i> Actividades Unidad III</a></li>
+                        <li><a href="#" data-content="quiz3" class="activity-link"><i class="fas fa-clipboard-check"></i> Cuestionario Unidad III</a></li>
+                    </ul>
+                </li>
+
+                <!-- UNIDAD IV -->
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad4">
+                        <i class="fas fa-chevron-right"></i> Unidad IV: Emprendimiento Tecnológico
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema4-1">4.1 Emprendimiento Tecnológico y Emprendedor</a></li>
+                        <li><a href="#" data-content="tema4-2">4.2 La Idea del Negocio</a></li>
+                        <li><a href="#" data-content="tema4-3">4.3 Innovaciones Centradas en el Usuario</a></li>
+                        <li><a href="#" data-content="tema4-4">4.4 Viabilidad Inicial de la Idea de Negocio</a></li>
+                        <li><a href="#" data-content="actividades4" class="activity-link"><i class="fas fa-tasks"></i> Actividades Unidad IV</a></li>
+                        <li><a href="#" data-content="quiz4" class="activity-link"><i class="fas fa-clipboard-check"></i> Cuestionario Unidad IV</a></li>
+                    </ul>
+                </li>
+
+                <!-- UNIDAD V -->
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad5">
+                        <i class="fas fa-chevron-right"></i> Unidad V: Plan de Negocio
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema5-1">5.1 Planeación Estratégica</a></li>
+                        <li><a href="#" data-content="tema5-2">5.2 Análisis de Competitividad de Porter</a></li>
+                        <li><a href="#" data-content="tema5-3">5.3 Modelo de Negocio</a></li>
+                        <li><a href="#" data-content="tema5-4">5.4 Validación de Iniciativas (Startups)</a></li>
+                        <li><a href="#" data-content="tema5-5">5.5 Financiamiento y Rentabilidad</a></li>
+                        <li><a href="#" data-content="tema5-6">5.6 Crecimiento Inteligente de Empresas</a></li>
+                        <li><a href="#" data-content="actividades5" class="activity-link"><i class="fas fa-tasks"></i> Actividades Unidad V</a></li>
+                        <li><a href="#" data-content="quiz5" class="activity-link"><i class="fas fa-clipboard-check"></i> Cuestionario Unidad V</a></li>
+                    </ul>
+                </li>
+
+                <!-- EXAMEN FINAL -->
+                <li class="menu-section exam-section">
+                    <div class="section-title" data-section="examen">
+                        <i class="fas fa-file-alt"></i> Examen Final
+                    </div>
+                </li>
+
+            </ul>
+        </aside>
+
+        <!-- ── ÁREA PRINCIPAL ── -->
+        <main class="content-area">
+
+            <!-- ══ BIENVENIDA ══ -->
+            <section class="tab-content active" id="bienvenida">
+                <div class="content-card">
+                    <h2><i class="fas fa-hand-wave"></i> Bienvenido al Curso de Innovación y Emprendimiento Tecnológico</h2>
+                    <div class="welcome-banner">
+                        <img src="pexels-a-darmel-7710153.jpg" alt="Innovación y Emprendimiento" class="banner-img">
+                    </div>
+                    <div class="welcome-text">
+                        <p>Bienvenido(a) al curso de <strong>Innovación y Emprendimiento Tecnológico</strong>. Este espacio está diseñado para que desarrolles las habilidades y conocimientos necesarios para proponer proyectos y modelos de negocio basados en los principios del emprendimiento e innovación tecnológica.</p>
+
+                        <div class="info-box">
+                            <h3><i class="fas fa-bullseye"></i> Propósito de la Unidad de Aprendizaje</h3>
+                            <p>Propone proyectos y modelos de negocio con base en los principios y fundamentos del emprendimiento e innovación tecnológica. Esta unidad contribuye al perfil de egreso de la Licenciatura en Ciencia de Datos con el desarrollo de habilidades de autoempleo, perspectiva de innovación y emprendimiento basado en tecnología.</p>
+                        </div>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-clock"></i>
+                                <h4>Duración</h4>
+                                <p>81 horas totales</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-layer-group"></i>
+                                <h4>Unidades</h4>
+                                <p>5 Unidades Temáticas</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-tasks"></i>
+                                <h4>Prácticas</h4>
+                                <p>14 Prácticas en Aula</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Semestre</h4>
+                                <p>VI y VII — LCD IPN</p>
+                            </div>
+                        </div>
+
+                        <div class="instructor-info">
+                            <h3><i class="fas fa-university"></i> Acerca del Curso</h3>
+                            <p>Este curso forma parte del programa académico de la <strong>Licenciatura en Ciencia de Datos</strong> del Instituto Politécnico Nacional, impartido en ESCOM, UPIIC y UPIIT. Fomenta el pensamiento crítico, la resolución de problemas, el pensamiento lateral y las habilidades de análisis orientadas al emprendimiento tecnológico.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ METODOLOGÍA ══ -->
+            <section class="tab-content" id="metodologia">
+                <div class="content-card">
+                    <h2><i class="fas fa-cogs"></i> Metodología del Curso</h2>
+
+                    <div class="methodology-section">
+                        <h3>Enfoque de Aprendizaje</h3>
+                        <p>Este curso utiliza la <strong>Estrategia de Aprendizaje Orientado a Proyectos (AOP)</strong>, que combina el estudio de casos, el aprendizaje basado en problemas y la construcción de proyectos reales de emprendimiento tecnológico.</p>
+                        <div class="method-cards">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-search"></i></div>
+                                <h4>Indagación Documental</h4>
+                                <p>Investigación de diferentes temas del programa con elaboración de mapas conceptuales y mentales.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-comments"></i></div>
+                                <h4>Discusiones Dirigidas</h4>
+                                <p>Análisis y debate de casos específicos para obtener conclusiones aplicables al emprendimiento.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-rocket"></i></div>
+                                <h4>Proyectos de Empresa</h4>
+                                <p>Construcción de una empresa evaluando innovación, emprendimiento, modelo de negocio y validación.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-flask"></i></div>
+                                <h4>Prácticas en Aula</h4>
+                                <p>14 prácticas que aplican herramientas de innovación y emprendimiento a problemas reales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3>Estructura del Curso</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker">1</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad I: Innovación</h4>
+                                    <p>La empresa innovadora, clasificación y reglas de la innovación. (6h teoría + 3h AA)</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">2</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad II: Innovación Tecnológica</h4>
+                                    <p>I+D+I, paradigmas tecnológicos, competencias, proceso y herramientas para innovar. (12h teoría + 3h práctica + 5h AA)</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">3</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad III: Emprendimiento</h4>
+                                    <p>La empresa, tipos de emprendimiento, clases de emprendedor y proceso emprendedor. (12h teoría + 4.5h práctica + 4h AA)</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">4</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad IV: Emprendimiento Tecnológico</h4>
+                                    <p>Principios, idea de negocio, innovación centrada en el usuario y viabilidad. (6h teoría + 6h práctica + 5h AA)</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">5</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad V: Plan de Negocio</h4>
+                                    <p>Planeación estratégica, Porter, modelo de negocio, validación, financiamiento y crecimiento. (18h teoría + 13.5h práctica + 7h AA)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3>Recursos de Aprendizaje</h3>
+                        <ul class="resource-list">
+                            <li><i class="fas fa-book"></i> Bibliografía básica y complementaria</li>
+                            <li><i class="fas fa-globe"></i> Recursos digitales: Nacional Financiera, Startup México</li>
+                            <li><i class="fas fa-video"></i> Curso edX: Emprendimiento Tecnológico (UC3M)</li>
+                            <li><i class="fas fa-project-diagram"></i> Herramientas: Canvas, Design Thinking, Lean Startup</li>
+                            <li><i class="fas fa-question-circle"></i> Cuestionarios de autoevaluación por unidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ COMPETENCIA ══ -->
+            <section class="tab-content" id="competencia">
+                <div class="content-card">
+                    <h2><i class="fas fa-bullseye"></i> Unidad de Competencia</h2>
+
+                    <div class="competence-section">
+                        <div class="main-competence">
+                            <h3>Competencia General</h3>
+                            <div class="competence-box">
+                                <p>Propone proyectos y modelos de negocio con base en los principios y fundamentos del emprendimiento e innovación tecnológica, desarrollando habilidades de autoempleo, pensamiento crítico, resolución de problemas y análisis orientados al ecosistema tecnológico actual.</p>
+                            </div>
+                        </div>
+
+                        <h3>Competencias por Unidad</h3>
+                        <div class="competences-grid">
+                            <div class="competence-card">
+                                <div class="competence-number">I</div>
+                                <h4>Innovación</h4>
+                                <p>Distingue la Innovación en las empresas a partir de su clasificación y reglas.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">II</div>
+                                <h4>Innovación Tecnológica</h4>
+                                <p>Aplica la innovación con base en su proceso, los paradigmas tecnológicos y sus herramientas.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">III</div>
+                                <h4>Emprendimiento</h4>
+                                <p>Diferencia los tipos de emprendimiento con base en sus características, importancia y clases de emprendedores.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">IV</div>
+                                <h4>Emprendimiento Tecnológico</h4>
+                                <p>Aplica los principios del emprendimiento con base en ideas de negocios, viabilidad y principios de innovación.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">V</div>
+                                <h4>Plan de Negocio</h4>
+                                <p>Propone un plan de negocios con base en la planeación estratégica, modelo de negocios y planificación futura.</p>
+                            </div>
+                        </div>
+
+                        <h3>Evaluación de los Aprendizajes</h3>
+                        <div class="indicators-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Evidencia</th>
+                                        <th>Descripción</th>
+                                        <th>Unidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mapas mentales/conceptuales</td>
+                                        <td>Organización visual de los conceptos clave de cada unidad</td>
+                                        <td>I – V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conclusiones de discusiones</td>
+                                        <td>Síntesis argumentada de los debates grupales</td>
+                                        <td>I – V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Solución de casos</td>
+                                        <td>Análisis y resolución de casos de emprendimiento reales</td>
+                                        <td>II – V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reporte de proyecto</td>
+                                        <td>Plan de negocio completo con empresa evaluada</td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reporte de prácticas</td>
+                                        <td>Documentación de las 14 prácticas realizadas en aula</td>
+                                        <td>I – V</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ EVALUACIÓN ══ -->
+            <section class="tab-content" id="evaluacion">
+                <div class="content-card">
+                    <h2><i class="fas fa-clipboard-check"></i> Evaluación y Acreditación</h2>
+
+                    <div class="eval-overview">
+                        <h3>Distribución de la Calificación</h3>
+                        <div class="eval-breakdown">
+                            <div class="eval-item">
+                                <div class="eval-circle" style="--percentage: 144deg">
+                                    <span>40%</span>
+                                </div>
+                                <h4>Diagnóstica</h4>
+                                <p>Evaluación diagnóstica</p>
+                            </div>
+                            <div class="eval-item">
+                                <div class="eval-circle" style="--percentage: 144deg">
+                                    <span>40%</span>
+                                </div>
+                                <h4>Proyectos</h4>
+                                <p>Reporte de proyectos</p>
+                            </div>
+                            <div class="eval-item">
+                                <div class="eval-circle" style="--percentage: 72deg">
+                                    <span>20%</span>
+                                </div>
+                                <h4>Prácticas</h4>
+                                <p>Reportes de prácticas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activities-eval">
+                        <h3>Detalle de Actividades</h3>
+                        <div class="activity-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Actividad / Práctica</th>
+                                        <th>Descripción</th>
+                                        <th>Unidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Práctica 1</td>
+                                        <td>Competencias básicas de innovación tecnológica</td>
+                                        <td>II</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Práctica 2</td>
+                                        <td>Herramientas de innovación (SCAMPER, Design Thinking)</td>
+                                        <td>II</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prácticas 3–4</td>
+                                        <td>Primeros pasos de una empresa y tipos de emprendimiento</td>
+                                        <td>III</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Práctica 5</td>
+                                        <td>El proceso emprendedor (entrevista a emprendedor real)</td>
+                                        <td>III</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prácticas 6–9</td>
+                                        <td>Emprendimiento tecnológico, ideas de negocio, UCI y viabilidad</td>
+                                        <td>IV</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prácticas 10–11</td>
+                                        <td>Planeación estratégica y análisis de competitividad de Porter</td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prácticas 12–13</td>
+                                        <td>Modelo de negocio y validación de iniciativas</td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td>Práctica 14 — Proyecto Final</td>
+                                        <td>Plan de negocio completo + presentación ejecutiva</td>
+                                        <td>V</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="exam-info">
+                        <h3><i class="fas fa-file-alt"></i> Información del Examen Final</h3>
+                        <div class="exam-details">
+                            <div class="exam-detail">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Tiempo</h4>
+                                    <p>60 minutos</p>
+                                </div>
+                            </div>
+                            <div class="exam-detail">
+                                <i class="fas fa-redo"></i>
+                                <div>
+                                    <h4>Intentos</h4>
+                                    <p>2 intentos máximo</p>
+                                </div>
+                            </div>
+                            <div class="exam-detail">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <h4>Preguntas</h4>
+                                    <p>20 preguntas (de banco de 25)</p>
+                                </div>
+                            </div>
+                            <div class="exam-detail">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Calificación mínima</h4>
+                                    <p>70% para aprobar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exam-features">
+                            <h4>Características del examen:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Preguntas seleccionadas aleatoriamente del banco</li>
+                                <li><i class="fas fa-check"></i> Retroalimentación inmediata al finalizar</li>
+                                <li><i class="fas fa-check"></i> Revisión detallada de respuestas</li>
+                                <li><i class="fas fa-check"></i> Cubre las 5 unidades del programa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grading-scale">
+                        <h3>Escala de Calificación</h3>
+                        <div class="scale-items">
+                            <div class="scale-item excellent">
+                                <span class="grade">90–100</span>
+                                <span class="label">Excelente</span>
+                            </div>
+                            <div class="scale-item good">
+                                <span class="grade">80–89</span>
+                                <span class="label">Muy Bien</span>
+                            </div>
+                            <div class="scale-item acceptable">
+                                <span class="grade">70–79</span>
+                                <span class="label">Bien</span>
+                            </div>
+                            <div class="scale-item insufficient">
+                                <span class="grade">0–69</span>
+                                <span class="label">No Aprobado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ REQUERIMIENTOS ══ -->
+            <section class="tab-content" id="requerimientos">
+                <div class="content-card">
+                    <h2><i class="fas fa-list-check"></i> Requerimientos del Curso</h2>
+
+                    <div class="requirements-section">
+                        <div class="req-category">
+                            <h3><i class="fas fa-laptop"></i> Requerimientos Técnicos</h3>
+                            <div class="req-grid">
+                                <div class="req-card">
+                                    <i class="fas fa-desktop"></i>
+                                    <h4>Computadora</h4>
+                                    <p>PC o Mac con sistema operativo actualizado</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-wifi"></i>
+                                    <h4>Internet</h4>
+                                    <p>Conexión estable de al menos 5 Mbps</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-globe"></i>
+                                    <h4>Navegador</h4>
+                                    <p>Chrome, Firefox, Safari o Edge actualizado</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h4>Lector PDF</h4>
+                                    <p>Adobe Reader u otro visor de documentos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-user-graduate"></i> Requerimientos Académicos</h3>
+                            <ul class="req-list">
+                                <li><i class="fas fa-check-circle"></i> Estar inscrito en la Licenciatura en Ciencia de Datos (semestre VI o VII)</li>
+                                <li><i class="fas fa-check-circle"></i> Conocimientos previos de Fundamentos Económicos y Finanzas Empresariales</li>
+                                <li><i class="fas fa-check-circle"></i> Haber cursado Propiedad Intelectual como materia antecedente</li>
+                                <li><i class="fas fa-check-circle"></i> Disposición para trabajo en equipo y aprendizaje orientado a proyectos</li>
+                            </ul>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-clock"></i> Requerimientos de Tiempo</h3>
+                            <div class="time-req">
+                                <div class="time-item">
+                                    <span class="time-value">81</span>
+                                    <span class="time-label">Horas totales del curso</span>
+                                </div>
+                                <div class="time-item">
+                                    <span class="time-value">4.5</span>
+                                    <span class="time-label">Horas teoría/semana</span>
+                                </div>
+                                <div class="time-item">
+                                    <span class="time-value">24</span>
+                                    <span class="time-label">Horas aprendizaje autónomo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Requisitos Obligatorios para Acreditar</h3>
+                            <div class="mandatory-req">
+                                <ul>
+                                    <li><i class="fas fa-asterisk"></i> Completar todas las prácticas de cada unidad</li>
+                                    <li><i class="fas fa-asterisk"></i> Presentar el proyecto integrador final (Plan de Negocio)</li>
+                                    <li><i class="fas fa-asterisk"></i> Realizar el examen final con calificación mínima de 70%</li>
+                                    <li><i class="fas fa-asterisk"></i> Cumplir con las fechas de entrega establecidas por el docente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ GLOSARIO ══ -->
+            <section class="tab-content" id="glosario">
+                <div class="content-card">
+                    <h2><i class="fas fa-spell-check"></i> Glosario de Términos</h2>
+
+                    <div class="glossary-search">
+                        <input type="text" id="glossarySearch" placeholder="Buscar término...">
+                    </div>
+
+                    <div class="glossary-container" id="glossaryContainer">
+
+                        <div class="glossary-letter">B</div>
+                        <div class="glossary-item">
+                            <dt>Bootstrapping</dt>
+                            <dd>Estrategia de financiamiento en la que un emprendedor usa sus propios ahorros o los ingresos del negocio para crecer, sin depender de inversores externos.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Burn Rate</dt>
+                            <dd>Velocidad a la que una startup gasta su capital disponible, generalmente expresado en dinero por mes.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Business Model Canvas (BMC)</dt>
+                            <dd>Herramienta visual de 9 bloques que describe cómo una empresa crea, entrega y captura valor.</dd>
+                        </div>
+
+                        <div class="glossary-letter">C</div>
+                        <div class="glossary-item">
+                            <dt>CAC (Costo de Adquisición de Cliente)</dt>
+                            <dd>Costo promedio en que incurre una empresa para conseguir un nuevo cliente, incluyendo gastos de marketing y ventas.</dd>
+                        </div>
+
+                        <div class="glossary-letter">D</div>
+                        <div class="glossary-item">
+                            <dt>Design Thinking</dt>
+                            <dd>Metodología centrada en el usuario para resolver problemas complejos: Empatizar → Definir → Idear → Prototipar → Evaluar.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Destrucción Creativa</dt>
+                            <dd>Concepto de Schumpeter que describe cómo la innovación tecnológica desplaza industrias obsoletas creando nuevas oportunidades.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Disrupción</dt>
+                            <dd>Innovación que transforma radicalmente un mercado existente o crea uno nuevo, desplazando a los actores establecidos.</dd>
+                        </div>
+
+                        <div class="glossary-letter">E</div>
+                        <div class="glossary-item">
+                            <dt>Efectos de Red</dt>
+                            <dd>Fenómeno en el que el valor de un producto o plataforma aumenta con cada nuevo usuario que se une.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Emprendimiento Tecnológico</dt>
+                            <dd>Modelo de negocio cuyo elemento diferenciador central es el desarrollo, aplicación o comercialización de tecnología.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Escalabilidad</dt>
+                            <dd>Capacidad de crecer rápidamente sin que los costos aumenten en la misma proporción que los ingresos.</dd>
+                        </div>
+
+                        <div class="glossary-letter">F</div>
+                        <div class="glossary-item">
+                            <dt>FODA</dt>
+                            <dd>Herramienta de análisis estratégico que evalúa Fortalezas, Oportunidades, Debilidades y Amenazas de una organización.</dd>
+                        </div>
+
+                        <div class="glossary-letter">I</div>
+                        <div class="glossary-item">
+                            <dt>I+D+I</dt>
+                            <dd>Investigación, Desarrollo e Innovación: cadena de valor del conocimiento tecnológico que genera impacto económico y social.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Innovación Disruptiva</dt>
+                            <dd>Transformación que crea nuevos mercados o desplaza actores establecidos, generalmente apoyándose en tecnología emergente.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Intraemprendimiento</dt>
+                            <dd>Actividad emprendedora e innovadora que se desarrolla dentro de una organización existente.</dd>
+                        </div>
+
+                        <div class="glossary-letter">J</div>
+                        <div class="glossary-item">
+                            <dt>Journey Map</dt>
+                            <dd>Herramienta visual que documenta la experiencia completa del usuario con un producto o servicio, identificando puntos de dolor y oportunidades.</dd>
+                        </div>
+
+                        <div class="glossary-letter">L</div>
+                        <div class="glossary-item">
+                            <dt>Lean Startup</dt>
+                            <dd>Metodología de emprendimiento basada en el ciclo Construir-Medir-Aprender para validar hipótesis de negocio con mínimos recursos.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>LTV (Lifetime Value)</dt>
+                            <dd>Valor de Vida del Cliente: ingreso total esperado de un cliente durante toda su relación con la empresa.</dd>
+                        </div>
+
+                        <div class="glossary-letter">M</div>
+                        <div class="glossary-item">
+                            <dt>MiPyMEs</dt>
+                            <dd>Micro, Pequeñas y Medianas Empresas. En México representan más del 99% de las empresas y generan alrededor del 72% del empleo formal.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>MVP (Minimum Viable Product)</dt>
+                            <dd>Versión más simple de un producto que permite recolectar el máximo aprendizaje validado con el mínimo esfuerzo y recursos.</dd>
+                        </div>
+
+                        <div class="glossary-letter">P</div>
+                        <div class="glossary-item">
+                            <dt>Paradigma Tecnológico</dt>
+                            <dd>Modelo de solución de problemas que define la dirección del cambio tecnológico en una industria durante un período determinado.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>PESTEL</dt>
+                            <dd>Herramienta de análisis del macroentorno: Político, Económico, Social, Tecnológico, Ecológico y Legal.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Pivotar</dt>
+                            <dd>Cambiar de dirección estratégica de manera estructurada cuando los datos de validación muestran que la hipótesis principal no funciona.</dd>
+                        </div>
+
+                        <div class="glossary-letter">R</div>
+                        <div class="glossary-item">
+                            <dt>Runway</dt>
+                            <dd>Tiempo que puede operar una startup con el capital disponible, calculado como capital disponible dividido entre el Burn Rate mensual.</dd>
+                        </div>
+
+                        <div class="glossary-letter">S</div>
+                        <div class="glossary-item">
+                            <dt>SCAMPER</dt>
+                            <dd>Técnica de creatividad para transformar ideas: Sustituir, Combinar, Adaptar, Modificar, Poner en otros usos, Eliminar, Reordenar.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Startup</dt>
+                            <dd>Empresa emergente con alto potencial de crecimiento y escalabilidad, generalmente basada en tecnología e innovación.</dd>
+                        </div>
+
+                        <div class="glossary-letter">T</div>
+                        <div class="glossary-item">
+                            <dt>TAM–SAM–SOM</dt>
+                            <dd>Marco para dimensionar el mercado: Mercado Total Disponible, Mercado Disponible Servible y Mercado Obtenible.</dd>
+                        </div>
+
+                        <div class="glossary-letter">V</div>
+                        <div class="glossary-item">
+                            <dt>Venture Capital (VC)</dt>
+                            <dd>Capital de riesgo: fondos de inversión que financian startups con alto potencial de crecimiento a cambio de participación accionaria.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Vigilancia Tecnológica</dt>
+                            <dd>Monitoreo sistemático del entorno tecnológico para identificar tendencias emergentes, oportunidades y amenazas competitivas.</dd>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ CONTENIDO DINÁMICO (sidebar) ══ -->
+            <section class="tab-content" id="dynamic-content">
+                <!-- El contenido se carga dinámicamente desde content.js -->
+            </section>
+
+            <!-- ══ EXAMEN FINAL ══ -->
+            <section class="tab-content" id="examen-section">
+                <div class="content-card">
+                    <h2><i class="fas fa-file-alt"></i> Examen Final</h2>
+
+                    <div id="exam-intro" class="exam-intro">
+                        <div class="exam-banner">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>Evaluación Final — Innovación y Emprendimiento Tecnológico</h3>
+                        </div>
+
+                        <div class="exam-rules">
+                            <h4>Instrucciones:</h4>
+                            <ul>
+                                <li>El examen consta de 20 preguntas seleccionadas aleatoriamente de un banco de 25</li>
+                                <li>Tienes un tiempo máximo de 60 minutos</li>
+                                <li>Dispones de 1 intento para realizar el examen</li>
+                                <li>Se requiere un mínimo de 70% para aprobar</li>
+                                <li>Al finalizar podrás revisar tus respuestas con retroalimentación detallada</li>
+                                <li><strong>Este examen es obligatorio para acreditar el curso</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="exam-status">
+                            <div class="status-item">
+                                <span class="status-label">Intentos restantes:</span>
+                                <span class="status-value" id="attemptsLeft">1</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Mejor calificación:</span>
+                                <span class="status-value" id="bestScore">—</span>
+                            </div>
+                        </div>
+
+                        <button id="start-exam-btn" class="btn-primary btn-large" onclick="startExam()">
+                            <i class="fas fa-play"></i> Iniciar Examen
+                        </button>
+                    </div>
+
+                    <!-- Contenedor del examen activo -->
+                    <div id="exam-container" class="exam-container" style="display: none;">
+                        <div class="exam-header">
+                            <div class="exam-timer">
+                                <i class="fas fa-clock"></i>
+                                <span id="exam-timer-display">60:00</span>
+                            </div>
+                            <div class="exam-progress">
+                                <span id="answered-count">0/20 respondidas</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="examProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="exam-question-container">
+                            <!-- Preguntas cargadas dinámicamente -->
+                        </div>
+
+                        <div class="exam-navigation">
+                            <button id="exam-prev-btn" class="btn-secondary" onclick="prevExamQuestion()" disabled>
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button id="exam-next-btn" class="btn-secondary" onclick="nextExamQuestion()">
+                                Siguiente <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button id="exam-submit-btn" class="btn-primary" onclick="submitExam()" style="display: none;">
+                                <i class="fas fa-paper-plane"></i> Enviar Examen
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resultados del examen -->
+                    <div id="exam-results" style="display: none;"></div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Innovación y Emprendimiento Tecnológico</h4>
+                <p>Licenciatura en Ciencia de Datos — Instituto Politécnico Nacional</p>
+            </div>
+            <div class="footer-section">
+                <h4>Licencia</h4>
+                <div class="license-info">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
+                        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons BY-NC-SA 4.0">
+                    </a>
+                    <p>Esta obra está bajo una <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Licencia Creative Commons BY-NC-SA 4.0</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> mparedesnescom@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 — IPN — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════
+         MODAL: MANUAL DE USUARIO
+    ══════════════════════════════════════════ -->
+    <div id="manualModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-book"></i> Manual de Usuario</h2>
+            <div class="manual-content">
+                <section class="manual-section">
+                    <h3>1. Navegación General</h3>
+                    <p>El curso está organizado en pestañas principales ubicadas en la parte superior:</p>
+                    <ul>
+                        <li><strong>Bienvenida:</strong> Información general y propósito del curso</li>
+                        <li><strong>Metodología:</strong> Cómo se desarrollará el aprendizaje orientado a proyectos</li>
+                        <li><strong>Unidad de Competencia:</strong> Objetivos de aprendizaje por unidad</li>
+                        <li><strong>Evaluación:</strong> Criterios, prácticas y porcentajes de calificación</li>
+                        <li><strong>Requerimientos:</strong> Requisitos técnicos y académicos</li>
+                        <li><strong>Glosario:</strong> Términos clave del emprendimiento e innovación</li>
+                    </ul>
+                </section>
+                <section class="manual-section">
+                    <h3>2. Contenidos del Curso</h3>
+                    <p>En el panel lateral izquierdo encontrarás las 5 unidades temáticas. Haz clic en cada unidad para expandir sus temas, actividades y cuestionario.</p>
+                </section>
+                <section class="manual-section">
+                    <h3>3. Cuestionarios por Unidad</h3>
+                    <p>Cada unidad incluye un cuestionario de autoevaluación de 10 preguntas con:</p>
+                    <ol>
+                        <li>15 minutos de tiempo</li>
+                        <li>2 intentos disponibles</li>
+                        <li>Calificación mínima aprobatoria del 60%</li>
+                        <li>Retroalimentación detallada al finalizar</li>
+                    </ol>
+                </section>
+                <section class="manual-section">
+                    <h3>4. Examen Final</h3>
+                    <p>El examen final cubre las 5 unidades y tiene las siguientes características:</p>
+                    <ul>
+                        <li>20 preguntas seleccionadas de un banco de 25</li>
+                        <li>60 minutos de tiempo</li>
+                        <li>Calificación mínima aprobatoria: 70%</li>
+                        <li>Revisión completa con retroalimentación al terminar</li>
+                    </ul>
+                </section>
+                <section class="manual-section">
+                    <h3>5. Búsqueda</h3>
+                    <p>Utiliza la barra de búsqueda en la parte superior para encontrar contenido específico dentro del curso ingresando palabras clave.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         MODAL: RESULTADOS DE BÚSQUEDA
+    ══════════════════════════════════════════ -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-modal" id="closeSearch">&times;</span>
+            <h2><i class="fas fa-search"></i> Resultados de Búsqueda</h2>
+            <div id="searchResults" class="search-results">
+                <!-- Resultados cargados dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SCRIPTS
+    ══════════════════════════════════════════ -->
+    <script src="content.js"></script>
+    <script src="quizzes.js"></script>
+    <script src="exam.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
